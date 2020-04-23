@@ -322,11 +322,11 @@ section {
 
 #About a {
   font-weight: 600;
-  color: #FF3E9C;
+  color: #89ab8f;
   transition: color 0.2s;
 }
 #About a:hover {
-  color: #FF9E00;
+  color: #89ab8f;
 }
 
 .inner-container {
@@ -388,12 +388,12 @@ section {
 
 #Publications a {
   font-weight: 400;
-  color: #FF3E9C;
+  color: #89ab8f;
   transition: color 0.2s;
 }
 
 #Publications a:hover {
-  color: #FF9E00;
+  color: #89ab8f;
 }
 
 .download-cv {
