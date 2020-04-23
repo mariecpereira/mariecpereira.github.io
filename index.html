@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mariana Pereira</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<script>
+
+function darkMode() {
+  /* Toggle colour scheme */
+  document.body.classList.toggle("dark-mode");
+
+  document.getElementById("banner-outer").classList.toggle("dark-mode");
+  document.getElementById("banner-outer").classList.toggle("light-mode");
+
+  document.getElementById("main-social-media-bar").classList.toggle("dark-mode");
+  document.getElementById("main-social-media-bar").classList.toggle("light-mode");
+
+  document.getElementById("contact-social-media-bar").classList.toggle("dark-mode");
+  document.getElementById("contact-social-media-bar").classList.toggle("light-mode");
+
+  document.getElementById("email").classList.toggle("dark-mode-text");
+  document.getElementById("email").classList.toggle("light-mode-text");
+
+  document.getElementById("home").classList.toggle("dark-mode-alt");
+  document.getElementById("home").classList.toggle("light-mode-alt");
+
+  document.getElementById("Publications").classList.toggle("dark-mode-alt");
+  document.getElementById("Publications").classList.toggle("light-mode-alt");
+
+  document.getElementById("CV").classList.toggle("dark-mode-alt");
+  document.getElementById("CV").classList.toggle("light-mode-alt");
+
+  /* Change button text */
+  if (document.body.classList.contains("dark-mode")) {
+    document.getElementById("dark-mode-text").innerHTML = 'dark';
+  } else {
+    document.getElementById("dark-mode-text").innerHTML = 'light';
+  }
+
+  var headers = document.getElementsByClassName("table-header");
+  for (let i = 0; i < headers.length; i++){
+    for (let j = 0; j < headers[i].children.length; j++) {
+      headers[i].children[j].classList.toggle("table-header-border-light");
+      headers[i].children[j].classList.toggle("table-header-border-dark");
+    }
+  }
+}
+
+// Show dropdown menu for mobiles
+function openNav() {
+  document.getElementsByClassName("dropdown")[0].classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#nav-button-text') & !event.target.matches("#menu-icon")) {
+    var element = document.getElementsByClassName("dropdown")[0];
+    if (element.classList.contains("show")) {
+      element.classList.remove("show");
+    }
+  }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="banner-outer" class="light-mode">
+  <div id="banner">
+    <div id="banner-title"><p><a href="#home">Jessica McFadyen</a></p></div>
+    <div id="banner-buttons">
+      <p class="banner-button"><a href="#home">Home</a></p>
+      <p class="banner-button"><a href="#About">About</a></p>
+      <p class="banner-button"><a href="#Publications">Publications</a></p>
+      <p class="banner-button"><a href="#CV">CV</a></p>
+      <p class="banner-button"><a href="#Contact">Contact</a></p>
+      <div id="dark-mode">
+        <label class="switch">
+          <input type="checkbox" onclick="darkMode(this)">
+          <span class="slider"></span>
+        </label>
+        <p id="dark-mode-text">Light</p>
+      </div>
+    </div>
+    <div id="nav-button-container">
+      <div id="nav-button-menu">
+        <button onclick="openNav()" class="dropdown-button" id="nav-button-text">Menu
+        <i class="fa fa-bars" aria-hidden="true" id="menu-icon"></i></button>
+      </div>
+      <div class="dropdown">
+        <p class="banner-button-mobile"><a href="#home">Home</a></p>
+        <p class="banner-button-mobile"><a href="#About">About</a></p>
+        <p class="banner-button-mobile"><a href="#Publications">Publications</a></p>
+        <p class="banner-button-mobile"><a href="#CV">CV</a></p>
+        <p class="banner-button-mobile"><a href="#Contact">Contact</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="home" class="light-mode-alt">
+  <a name="Home"></a>
+  <div id="main-inner">
+    <div>
+      <h1>Cognitive neuroscientist</h1>
+      <h2>PhD candidate at Donders Institute for brain cognition and behavior </h2>
+      <h3>Wanderlust, painter, best auntie</h3>
+
+      <div class="tooltip">
+        <p id="email" class="light-mode-text">m.pereira@donders.ru.nl</p>
+      </div>
+      <div class="social-media-bar light-mode" id="main-social-media-bar">
+        <div class="tooltip" style="position:relative;">
+          <a href="https://twitter.com/mari_ecpereira" class="fa fa-twitter-square twitter-button"></a>
+          <span class="tooltiptext" style="top:3em; position:absolute;">Twitter</span>
+        </div>
+        <div class="tooltip" style="position:relative;">
+          <a href="https://github.com/mariecpereira/" class="fa fa-github-square github-button"></a>
+          <span class="tooltiptext" style="top:3em; position:absolute;">GitHub</span>
+        </div>
+        <div class="tooltip" style="position:relative;">
+          <a href="https://scholar.google.com/citations?user=81TG7-AAAAAJ&hl=pt-BR" class="ai ai-google-scholar-square ai-2x google-scholar-button"></a>
+          <span class="tooltiptext" style="top:3em; position:absolute;">Google Scholar</span>
+        </div>
+        <div class="tooltip" style="position:relative;">
+          <a href="https://orcid.org/0000-0002-3771-2787" class="ai ai-orcid ai-2x orcid-button"></a>
+          <span class="tooltiptext" style="top:3em; position:absolute;">Orcid</span>
+        </div>
+        <div class="tooltip" style="position:relative;">
+          <a href="https://www.linkedin.com/in/mariana-pereira-9ba81068/" class="fa fa-linkedin-square linkedin-button"></a>
+          <span class="tooltiptext" style="top:3em; position:absolute;">LinkedIn</span>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+<div class="content">
+<section id="About">
+  <div class="inner-container" style="margin-bottom:3em;">
+    <h1>About</h1>
+    <hr style="width: 7em;">
+
+    <p>Mariana is a PhD candidate in cognitive neuroscience investigating the brain networks that characterize rapid-eye movement (REM) sleep. She is currently pursueing her doctoral degree in the Radboud University Medical Centre, at the Donders Institute in Nijmegen, the Netherlands, under the supervision of Dr. Martin Dresler.</p>
+
+    <p>Mariana's academic <a href="#Publications">publications</a> can be found online.</p>
+
+  </div>
+</section>
+
+<section id="Publications" class="light-mode-alt">
+  <div class="inner-container">
+    <h1>Publications</h1>
+    <hr style="width: 7em;">
+
+    <div>
+      <h2>Papers</h2>
+
+      <table id="papers">
+        <tr class="table-header">
+          <th class="table-header-border-light">Authors</th>
+          <th class="table-header-border-light">Year</th>
+          <th class="table-header-border-light">Title</th>
+          <th class="table-header-border-light">Journal</th>
+          <th class="table-header-border-light">Link</th>
+        </tr>
+        <tr>
+          <th>Herrera, W., <strong>Pereira, M.</strong>, Bento, M., Lapa, A. T., Appenzeller, S., Rittner, L.</th>
+          <th>2020</th>
+          <th>A framework for quality assessment of corpus callosum segmentation in large-scale studies</th>
+          <th>Journal of Neuroscience Methods</th>
+          <th><a href="https://doi.org/10.1016/j.jneumeth.2020.108593">Read here</a></th>
+        </tr>
+        <tr>
+          <th><strong>Pereira, M.</strong>, Fantini, I., Lotufo, R., Rittner, L.</th>
+          <th>2020</th>
+          <th>An extended-2D CNN for multiclass Alzheimer's Disease diagnosis through Structural MRI.</th>
+          <th>SPIE Medical Imaging 2020: Computer-Aided Diagnosis</th>
+          <th><a href="https://doi.org/10.1117/12.2550753">Read here</a></th>
+        </tr>
+        <tr>
+          <th><strong>Pereira, M.</strong>, Magalhaes, T., Lotufo, R., Balthazar, M., Rittner, L.</th>
+          <th>2019</th>
+          <th>A Brazilian dataset domain adaptation to diagnose Alzheimer's disease and subjects with cognitive deficit using convolutional neural networks.</th>
+          <th>Journal of Epilepsy and Clinical Neurophysiology</th>
+          <th><a href="https://www.researchgate.net/publication/332258105_A_Brazilian_dataset_domain_adaptation_to_diagnose_Alzheimer's_disease_and_subjects_with_cognitive_deficit_using_convolutional_neural_networks?_sg=iV9MIh8fmOxDksejU5GeyGODtIWNnOQNDnL9eGNWW4suzRQ3kDka3smRlFZJR59YB9w0D-IA2NJDql1QXcoMZYGQXJGPrxNiHa80ZEfa.NCuTRoMiGhfH_TJKgpdK0hC2s7p6VyZY9HahTs8h7LfCwdDznWkP_nhDZCD5Gkhe8lKQxmtvgkdPFRaZX2LzuA">Read here</a></th>
+        </tr>
+        <tr>
+          <th><strong>Pereira, M.</strong>, Lotufo, R., Rittner, L.</th>
+          <th>2018</th>
+          <th>An extended-2D CNN approach for diagnosis of Alzheimer's disease through structural MRI.</th>
+          <th> Proceedings of the 27th Annual Meeting of ISMRM 2019</th>
+          <th><a href="http://archive.ismrm.org/2019/3050.html">Read here</a></th>
+        </tr>
+        <tr>
+          <th><strong>Pereira, M.</strong>, Herrera, W., Lotufo, R., Rittner, L.</th>
+          <th>2018</th>
+          <th>Neural correlates of temporal complexity and synchrony during audiovisual correspondence detection</th>
+          <th>Journal of Epilepsy and Clinical Neurophysiology</th>
+          <th><a href="">Read here</a></th>
+        </tr>
+        <tr>
+          <th><strong>Pereira, M.</strong>, Cover, G., Appenzeller, S., Rittner, L.</th>
+          <th>2018</th>
+          <th>Corpus callosum parcellation methods: a quantitative comparative study.</th>
+          <th>Medical Imaging 2018: Biomedical Applications in Molecular, Structural, and Functional Imaging</th>
+          <th><a href="https://doi.org/10.1117/12.2296617">Read here</a></th>
+        </tr>
+        <tr>
+          <th>Cover, G., <strong>Pereira, M.</strong>, Bento, M., Appelenzer, S., Rittner, L.</th>
+          <th>2017</th>
+          <th>Data-Driven Corpus Callosum Parcellation Method through Diffusion Tensor Imaging.</th>
+          <th>IEEE Access: Advanced Signal Processing Methods in Medical Imaging</th>
+          <th><a href="https://ieeexplore.ieee.org/document/8065035">Read here</a></th>
+        </tr>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h2>Theses</h2>
+      <table id="theses">
+        <tr class="table-header">
+          <th class="table-header-border-light">Authors</th>
+          <th class="table-header-border-light">Year</th>
+          <th class="table-header-border-light">Title</th>
+          <th class="table-header-border-light">Journal</th>
+          <th class="table-header-border-light">Link</th>
+        </tr>
+        <tr>
+        <tr>
+          <th><strong>Pereira, M.</strong></th>
+          <th>2014</th>
+          <th>An extended-2D CNN approach for diagnosis of Alzheimer's disease through structural MRI</th>
+          <th>University of Campinas ({M.Sc. in Electrical and Computer Engineering, GPA 4.0)</th>
+          <th><a href="http://repositorio.unicamp.br/bitstream/REPOSIP/334116/1/Pereira_MarianaEugeniaDeCarvalho_M.pdf">Read here</a></th>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<section id="CV" class="light-mode-alt">
+  <div class="inner-container" style="display:flex; flex-direction:column; justify-content:center;">
+    <h1>CV</h1>
+    <hr style="width: 7em;">
+
+    <a href="CV_MarianaPereira.pdf" class="download-cv" download target="_blank">Click to download CV as PDF</a>
+
+  </div>
+</section>
+
+<section id="Contact">
+  <div class="inner-container">
+
+    <h1>Contact</h1>
+    <hr style="width: 7em; margin-bottom:2em;">
+
+    <div class="tooltip">
+      <p id="email" style="text-align:center;">m.pereira@donders.ru.nl</p>
+    </div>
+
+    <div class="social-media-bar light-mode" style="justify-content:center; margin-bottom:2em;" id="contact-social-media-bar">
+      <div class="tooltip" style="position:relative;">
+        <a href="https://twitter.com/mari_ecpereira" class="fa fa-twitter-square twitter-button"></a>
+        <span class="tooltiptext" style="top:3em; position:absolute;">Twitter</span>
+      </div>
+      <div class="tooltip" style="position:relative;">
+        <a href="https://github.com/mariecpereira/" class="fa fa-github-square github-button"></a> 
+        <span class="tooltiptext" style="top:3em; position:absolute;">GitHub</span>
+      </div>
+      <div class="tooltip" style="position:relative;">
+        <a href="https://scholar.google.com/citations?user=81TG7-AAAAAJ&hl=pt-BR" class="ai ai-google-scholar-square ai-2x google-scholar-button"></a>
+        <span class="tooltiptext" style="top:3em; position:absolute;">Google Scholar</span>
+      </div>
+      <div class="tooltip" style="position:relative;">
+        <a href="https://orcid.org/0000-0002-3771-2787" class="ai ai-orcid ai-2x orcid-button"></a>
+        <span class="tooltiptext" style="top:3em; position:absolute;">Orcid</span>
+      </div>
+      <div class="tooltip" style="position:relative;">
+        <a href="https://www.linkedin.com/in/mariana-pereira-9ba81068/" class="fa fa-linkedin-square linkedin-button"></a>
+        <span class="tooltiptext" style="top:3em; position:absolute;">LinkedIn</span>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:center; flex-direction:column; align-items:center; text-align:center;">
+      <p><strong>Donders Institute for Brain, Cognition and Behaviour<br>Sleep and Memory Lab</strong></p>
+      <p style="margin-top:-0.5em;">Kapittelweg 29,
+      <br>6525 EN
+      <br>Nijmegen
+      <br>Netherlands</p>
+    </div>
+
+
+  </div>
+</section>
+
+</body>
+
+<footer>
+  <p>&copy; Mariana Pereira, 2020</p>
+</footer>
+
+</html>
