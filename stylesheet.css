@@ -201,14 +201,14 @@ input:checked + .slider:before {
   font-size: 1.5em;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #671709;
+  color: #89ab8f;
 }
 
 #main-inner h3 {
   font-size: 1.2em;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #bf8980;
+  color: #89ab8f;
 }
 
 #email {
@@ -417,9 +417,9 @@ section {
   transition: border 0.4s, background 0.4s, color 0.4s;
 }
 .download-cv:hover {
-  border-color: #FF0068;
+  border-color: #89ab8f;
   background-color: #FFE8F1;
-  color: #FF0068;
+  color: #89ab8f;
 }
 
 #experiment-code-table {
@@ -564,7 +564,7 @@ footer {
   }
   .banner-button-mobile {
     text-align: right;
-    color: #FF0068;
+    color: #89ab8f;
   }
   .show {
     display: block;
